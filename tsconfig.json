@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "noImplicitAny": true,
+    "module": "ESNext",
+    "target": "esnext",
+    "moduleResolution": "node",
+    "declaration": true,
+    "removeComments": true,
+    "strict":true,
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "allowSyntheticDefaultImports": true, // Allow default imports from modules with no default export
+    "esModuleInterop": true,
+
+    "sourceMap": true
+  },
+  "files": ["src/index.ts"],
+  "exclude": ["node_modules", "dist"]
+}
