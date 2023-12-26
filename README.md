@@ -1,0 +1,1 @@
+# menora-lib-starter-vite
