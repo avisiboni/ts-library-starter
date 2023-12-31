@@ -12,4 +12,7 @@ describe('add function tests', () => {
   test('adds -1 + -2 to equal -3', () => {
     expect(add(-1, -2)).toBe(-3);
   });
+  test('input not as a number', () => {
+    expect(()=> add('a' as any, -2)).toThrow('The provided input must be a number');
+  });
 });

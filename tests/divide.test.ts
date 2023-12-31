@@ -1,4 +1,4 @@
-import {divide} from "../src";
+import { divide} from "../src";
 
 describe('divide', () => {
 
@@ -16,5 +16,8 @@ describe('divide', () => {
   
   test('throws an error when dividing by zero', () => {
     expect(() => divide(10, 0)).toThrow('Dividing by zero is not allowed');
+  });
+  test('input not as a number', () => {
+    expect(() =>divide('a' as any, -2)).toThrow('The provided input must be a number');
   });
 });

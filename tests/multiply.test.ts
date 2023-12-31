@@ -1,7 +1,10 @@
-import {multiply} from "../src";
+import { multiply} from "../src";
 
 
 describe('multiply', () => {
+    test('input not as a number', () => {
+        expect(()=> multiply('a' as any, -2)).toThrow('The provided input must be a number');
+    });
     it('should correctly multiply two positive numbers', () => {
         expect(multiply(2, 3)).toBe(6);
     });

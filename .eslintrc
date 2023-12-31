@@ -1,0 +1,105 @@
+{
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "project": "./tsconfig.eslint.json"
+  },
+  "plugins": [
+    "@typescript-eslint",
+    "no-loops",
+    "function-name"
+  ],
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:jest/recommended",
+    "airbnb-base"
+  ],
+  "rules": {
+    "no-loops/no-loops": 1,
+    "complexity": [
+      "warn",
+      6
+    ],
+    // https://typescript-eslint.io/rules/no-unnecessary-condition/
+    "@typescript-eslint/no-unnecessary-condition": "error",
+    // https://typescript-eslint.io/rules/no-floating-promises/
+    "@typescript-eslint/no-floating-promises": "error",
+    // https://github.com/legend80s/eslint-plugin-function-name
+    "function-name/starts-with-verb": "warn",
+    // https://eslint.org/docs/latest/rules/max-params
+    "max-params": ["warn",4],
+    "require-await": "warn",
+    "no-nested-ternary": "warn",
+    // https://typescript-eslint.io/rules/naming-convention/
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "variable",
+        "format": [
+          "camelCase",
+          "UPPER_CASE"
+        ],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "forbid"
+      },
+      {
+        "selector": "function",
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ]
+      },
+      {
+        "selector": "parameter",
+        "format": [
+          "camelCase"
+        ],
+        "leadingUnderscore": "forbid"
+      },
+      {
+        "selector": "property",
+        "format": [
+          "camelCase",
+          "UPPER_CASE",
+          "PascalCase"
+        ],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "allow"
+      },
+      {
+        "selector": "method",
+        "format": [
+          "camelCase",
+          "PascalCase"
+        ]
+      },
+      {
+        "selector": "accessor",
+        "format": [
+          "camelCase",
+          "UPPER_CASE",
+          "PascalCase"
+        ],
+        "leadingUnderscore": "allow",
+        "trailingUnderscore": "allow"
+      },
+      {
+        "selector": "enumMember",
+        "format": [
+          "camelCase",
+          "UPPER_CASE",
+          "PascalCase"
+        ]
+      },
+      {
+        "selector": "typeLike",
+        "format": [
+          "PascalCase"
+        ]
+      }
+    ]
+  }
+}
