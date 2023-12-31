@@ -8,3 +8,4 @@ Additionally,this project uses the [Tsup](https://tsup.egoist.dev/) bundler to b
 This is project also aimed to use the recommended eslint rules for Typescript.
 
 
+# ts-library-starter
